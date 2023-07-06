@@ -33,9 +33,9 @@ func (l *Lunar) DayChi() string {
 
 func (l *Lunar) MonthAlias() string {
 	if l.Leap {
-		return fmt.Sprintf("%s %s Nhuận", l.MonthCan(), l.monthChi())
+		return fmt.Sprintf("%s %s Nhuận", l.MonthCan(), l.MonthChi())
 	}
-	return fmt.Sprintf("%s %s", l.MonthCan(), l.monthChi())
+	return fmt.Sprintf("%s %s", l.MonthCan(), l.MonthChi())
 }
 
 func (l *Lunar) MonthCan() string {
@@ -43,7 +43,7 @@ func (l *Lunar) MonthCan() string {
 	return Can[i]
 }
 
-func (l *Lunar) monthChi() string {
+func (l *Lunar) MonthChi() string {
 	i := (l.Month + 1) % 12
 	return Chi[i]
 }
