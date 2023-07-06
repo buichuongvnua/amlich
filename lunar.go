@@ -18,27 +18,27 @@ func (l *Lunar) String() string {
 }
 
 func (l *Lunar) DayAlias() string {
-	return fmt.Sprintf("%s %s", l.dayCan(), l.dayChi())
+	return fmt.Sprintf("%s %s", l.DayCan(), l.DayChi())
 }
 
-func (l *Lunar) dayCan() string {
+func (l *Lunar) DayCan() string {
 	jd := date2JuliusDay(l.t.Day(), int(l.t.Month()), l.t.Year())
 	return Can[(jd+9)%10]
 }
 
-func (l *Lunar) dayChi() string {
+func (l *Lunar) DayChi() string {
 	jd := date2JuliusDay(l.t.Day(), int(l.t.Month()), l.t.Year())
 	return Chi[(jd+1)%12]
 }
 
 func (l *Lunar) MonthAlias() string {
 	if l.Leap {
-		return fmt.Sprintf("%s %s Nhuận", l.monthCan(), l.monthChi())
+		return fmt.Sprintf("%s %s Nhuận", l.MonthCan(), l.monthChi())
 	}
-	return fmt.Sprintf("%s %s", l.monthCan(), l.monthChi())
+	return fmt.Sprintf("%s %s", l.MonthCan(), l.monthChi())
 }
 
-func (l *Lunar) monthCan() string {
+func (l *Lunar) MonthCan() string {
 	i := (l.Year*12 + l.Month + 3) % 10
 	return Can[i]
 }
@@ -49,15 +49,15 @@ func (l *Lunar) monthChi() string {
 }
 
 func (l *Lunar) YearAlias() string {
-	return fmt.Sprintf("%s %s", l.yearCan(), l.yearChi())
+	return fmt.Sprintf("%s %s", l.YearCan(), l.YearChi())
 }
 
-func (l *Lunar) yearCan() string {
+func (l *Lunar) YearCan() string {
 	i := (l.Year + 6) % 10
 	return Can[i]
 }
 
-func (l *Lunar) yearChi() string {
+func (l *Lunar) YearChi() string {
 	i := (l.Year + 8) % 12
 	return Chi[i]
 }
