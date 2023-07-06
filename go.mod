@@ -1,3 +1,3 @@
-module github.com/hungtrd/amlich
+module github.com/buichuongvnua/amlich
 
-go 1.19
+go 1.20
