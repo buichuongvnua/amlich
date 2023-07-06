@@ -5,4 +5,5 @@ var (
 	Chi             = [12]string{"Tý", "Sửu", "Dần", "Mão", "Thìn", "Tỵ", "Ngọ", "Mùi", "Thân", "Dậu", "Tuất", "Hợi"}
 	DaysOfWeek      = [7]string{"Chủ Nhật", "Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ Sáu", "Thứ Bảy"}
 	VietnamTimezone = "Asia/Ho_Chi_Minh"
+	NguHanh         = [5]string{"Kim", "Mộc", "Thủy", "Hỏa", "Thổ"}
 )

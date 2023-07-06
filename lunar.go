@@ -80,3 +80,21 @@ func (l *Lunar) Weekday() string {
 func (l *Lunar) Next() *Lunar {
 	return nil
 }
+
+func (l *Lunar) DayNguHanh() string {
+	switch l.DayChi() {
+	case Chi[2], Chi[3]:
+		return NguHanh[1]
+	case Chi[5], Chi[6]:
+		return NguHanh[3]
+	case Chi[8], Chi[9]:
+		return NguHanh[0]
+	case Chi[11], Chi[0]:
+		return NguHanh[2]
+	default:
+		return NguHanh[4]
+	}
+
+	return ""
+
+}
